@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
 
   nitro: {
@@ -8,9 +8,14 @@ export default defineNuxtConfig({
 
     cloudflare: {
       deployConfig: true,
-      nodeCompat: true
-    }
+      nodeCompat: true,
+    },
   },
 
-  modules: ["nitro-cloudflare-dev"]
-})
+  runtimeConfig: {
+    libsqlUrl: "",
+    libsqlAuthToken: "",
+  },
+
+  modules: ["nitro-cloudflare-dev"],
+});

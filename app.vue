@@ -1,6 +1,7 @@
+<script setup lang="ts">
+const { data } = useFetch("/api/links");
+</script>
+
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <pre>{{ data }}</pre>
 </template>
